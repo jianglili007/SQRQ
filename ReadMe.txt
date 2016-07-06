@@ -1,6 +1,8 @@
 For Users:
 
-spark-submit --class de.tf.uni.freiburg.sparkrdf.run.QueryExecutor --master spark://MasterAdress SparqlForSpark-1.0-with-dependencies.jar -i <GRAPH_PATH> -mem <WORKER_MEMORY> -q <QUERY_FILE_PATH_1, QUERY_FILE_PATH_2, ...> -jn <JOB_NAME>
+
+spark-submit --class test.query.queryMain  --master park://MasterAdress sparkForSparql.jar -i <GRAPH_PATH> -so -q  <Query_PATH> -s <Schema_PATH> 
+
 
 Command Line Parameters:
 
@@ -34,6 +36,8 @@ Command Line Parameters:
 	Load the graph without hashing. Assign the node ids with count based method instead
 -vp
 	Set this flag if you are planning to use queries where the predicate could be a variable field. Must be set while the first loading of a graph.
+-s     
+       Schema-Path to store ontology Shcema
 
 See also the Spark Submit page:
 https://spark.apache.org/docs/latest/submitting-applications.html
